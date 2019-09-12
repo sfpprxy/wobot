@@ -95,7 +95,7 @@ func activate() {
 	}
 	dateStr, err := decrypt(key, input)
 	if err != nil {
-		log.Error("激活码错误或已过期", dateStr)
+		fmt.Println("激活码错误或已过期", dateStr)
 		activate()
 	}
 	layout := "2006-01-02"
@@ -104,7 +104,7 @@ func activate() {
 		log.Error(err)
 	}
 	if date.Before(time.Now()) {
-		log.Error("激活码错误或已过期")
+		fmt.Println("激活码错误或已过期")
 		activate()
 	}
 	fmt.Println("已激活 到期时间 ", dateStr)
