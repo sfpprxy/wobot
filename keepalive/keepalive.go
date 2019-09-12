@@ -9,7 +9,7 @@ import (
 )
 
 var isStarted = false
-var sleepTime = 1
+var sleepTime = 120
 var kbDelay = 200
 
 func doWalk() {
