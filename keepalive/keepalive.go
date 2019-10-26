@@ -72,7 +72,7 @@ func wowPrintEnd() {
 func listenKey() {
 	robotgo.Sleep(1)
 	log.Debug("开始监听下一次快捷键")
-	pauseKey := robotgo.AddEvent("9")
+	pauseKey := robotgo.AddEvent("f10")
 	if pauseKey {
 		isStarted = !isStarted
 		if isStarted {
@@ -123,7 +123,7 @@ func main() {
 	fmt.Println("如何关闭挂机宝: 直接关掉本窗口")
 	fmt.Println("==================使用说明==================")
 	// 验证激活
-	activate()
+	// activate()
 	// 监听快捷键
 	go listenKey()
 	// 主循环
