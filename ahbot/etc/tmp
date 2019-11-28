@@ -1,0 +1,168 @@
+Message: TSM\Core\UI\Elements\SniperScrollingTable.lua:117: attempt to concatenate local 'record' (a table value)
+Time: 10/28/19 16:19:14 (178721381)
+Client: 1.13.2
+Locale: zhCN
+Combat: false
+Error Count: 1
+Stack Trace:
+  TSM\Core\UI\Elements\SniperScrollingTable.lua:117 <?._SetRowData>
+  TSM\Core\UI\Elements\ScrollingTable.lua:290 <?.Draw>
+  TSM\Core\UI\Elements\AuctionScrollingTable.lua:287 <?.Draw>
+  TSM\Core\UI\Elements\ScrollingTable.lua:127 <?.UpdateData>
+  TSM\Core\UI\Elements\AuctionScrollingTable.lua:561 <_updateCallback>
+  TSM\Core\Lib\Database\DatabaseQuery.lua:890 <DatabaseQuery.lua:881>
+  TSM\Core\Lib\Database\Database.lua:730 <Database.lua:718>
+  TSM\Core\Lib\Database\Database.lua:237 <Database.lua:233>
+  TSM\Core\Lib\Auction\AuctionScan.lua:665 <ScanQueryThreaded>
+  TSM\Core\Lib\Auction\AuctionScan.lua:206 <AuctionScan.lua:204>
+  TSM\Core\Service\Sniper\BuyoutSearch.lua:42 <_func>
+  TSM\Core\Lib\Thread.lua:473 <Thread.lua:470>
+Temp Tables:
+  [4] ?
+Object Pools:
+  AUCTION_FILTERS (1 created, 1 in use)
+    <none>
+  UI_SniperScrollingTable (1 created, 1 in use)
+    <none>
+  UI_Texture (3 created, 2 in use)
+    <none>
+  EXPIRING_MAIL_TASK (0 created, 0 in use)
+    <none>
+  GATHERING_ALT_TASK (0 created, 0 in use)
+    <none>
+  UI_Spacer (5 created, 4 in use)
+    <none>
+  UI_Button (9 created, 9 in use)
+    [4] TSM\Core\UI\Elements\LargeApplicationFrame.lua:97 -> TSM\Core\UI\AuctionUI\Core.lua:211
+  UI_ApplicationFrame (1 created, 0 in use)
+    <none>
+  DATABASE_QUERY_CLAUSES (46 created, 43 in use)
+    <none>
+  TABLE_ROWS (22 created, 20 in use)
+    [20] TSM\Core\UI\Elements\AuctionScrollingTable.lua:425 -> TSM\Core\UI\Elements\ShoppingScrollingTable.lua:93
+  DATABASE_SCHEMAS (1 created, 0 in use)
+    <none>
+  COOLDOWN_TASK (0 created, 0 in use)
+    <none>
+  UI_ViewContainer (1 created, 1 in use)
+    <none>
+  UI_PlayerGoldText (1 created, 1 in use)
+    <none>
+  DATABASE_QUERY_RESULT_ROWS (264 created, 65 in use)
+    [65] ???
+  UI_QueryScrollingTable (1 created, 0 in use)
+    <none>
+  GROUP_IMPORTS (0 created, 0 in use)
+    <none>
+  DATABASE_QUERIES (20 created, 19 in use)
+    <none>
+  UI_Frame (9 created, 9 in use)
+    [4] TSM\Core\UI\Elements\LargeApplicationFrame.lua:102 -> TSM\Core\UI\AuctionUI\Core.lua:211
+  UI_Text (7 created, 5 in use)
+    <none>
+  UI_ProgressBar (1 created, 1 in use)
+    <none>
+  UI_ActionButton (2 created, 1 in use)
+    <none>
+  EXPIRED_AUCTION_TASK (1 created, 1 in use)
+    <none>
+  UI_LargeApplicationFrame (1 created, 1 in use)
+    <none>
+  UI_AlphaAnimatedFrame (4 created, 4 in use)
+    [4] TSM\Core\UI\Elements\LargeApplicationFrame.lua:91 -> TSM\Core\UI\AuctionUI\Core.lua:211
+Threads:
+  {
+    PLAYER_PROFESSIONS={
+      isImmortal=false,
+      createCaller="TSM\\Core\\Lib\\Addon.lua:36",
+      startCaller="TSM\\Core\\Service\\Crafting\\PlayerProfessions.lua:71",
+      state="DEAD",
+      cpuTimeUsed=11.680135309696,
+      cpuPct="0.2%",
+      realTimeUsed=7469.6784153283,
+      eventNames={
+      },
+      backtrace={
+      }
+    },
+    SNIPER_BUYOUT_SEARCH={
+      isImmortal=false,
+      createCaller="TSM\\Core\\Lib\\Addon.lua:36",
+      startCaller="TSM\\Core\\UI\\AuctionUI\\Sniper.lua:446",
+      state="RUNNING",
+      cpuTimeUsed=3.0276702940464,
+      cpuPct="0.1%",
+      realTimeUsed=4015.0291906297,
+      eventNames={
+      },
+      backtrace={
+        [1]="TSM\\Core\\UI\\Elements\\ScrollingTable.lua:127",
+        [2]="TSM\\Core\\UI\\Elements\\AuctionScrollingTable.lua:561",
+        [3]="TSM\\Core\\Lib\\Database\\DatabaseQuery.lua:890",
+        [4]="TSM\\Core\\Lib\\Database\\Database.lua:730",
+        [5]="TSM\\Core\\Lib\\Database\\Database.lua:237",
+        [6]="TSM\\Core\\Lib\\Auction\\AuctionScan.lua:665",
+        [7]="TSM\\Core\\Lib\\Auction\\AuctionScan.lua:206",
+        [8]="TSM\\Core\\Service\\Sniper\\BuyoutSearch.lua:42",
+        [9]="TSM\\Core\\Lib\\Thread.lua:473"
+      }
+    }
+  }
+Debug Log:
+  16:19:15.375 [ERR] {ErrorHandler.lua:155} TSM\Core\UI\Elements\SniperScrollingTable.lua:117: attempt to concatenate local 'record' (a table value)
+  16:19:15.375 [INFO] {AuctionScan.lua:564|SNIPER_BUYOUT_SEARCH} Took 0 soft retries
+  16:19:15.275 [INFO] {AuctionScan.lua:551|SNIPER_BUYOUT_SEARCH} Took 0 seconds for AH to settle
+  16:19:11.354 [INFO] {FSM.lua:93} [SNIPER] EV_SCAN_FRAME_SHOWN
+  16:19:11.354 [INFO] {Thread.lua:595} Starting scheduler
+  16:19:11.354 [INFO] {FSM.lua:118} [SNIPER] ST_INIT -> ST_RUNNING_SCAN
+  16:19:11.354 [INFO] {FSM.lua:118} [SNIPER] ST_INIT -> ST_INIT
+  16:19:11.354 [INFO] {FSM.lua:93} [SNIPER] EV_START_SCAN
+  16:19:11.354 [INFO] {Analytics.lua:78} AC UI_NAVIGATION auction/sniper/selection auction/sniper/scan
+  16:19:11.354 [INFO] {Core.lua:79} Starting scan ??????
+  16:19:10.924 [INFO] {AuctionTracking.lua:227} Scanned auctions (left=0)
+  16:19:10.924 [INFO] {AuctionTracking.lua:173} Sorting owner auctions
+  16:19:10.754 [WARN] {Event.lua:75} Event (AUCTION_HOUSE_SHOW) callback took 25.09ms
+  16:19:10.754 [INFO] {Analytics.lua:78} AC UI_NAVIGATION auction/sniper auction/sniper/selection
+  16:19:10.754 [INFO] {Analytics.lua:78} AC UI_NAVIGATION auction auction/sniper
+  16:19:10.754 [INFO] {Analytics.lua:78} AC UI_NAVIGATION  auction
+  16:19:09.854 [INFO] {Thread.lua:651} Stopping the scheduler
+  16:19:09.854 [INFO] {Thread.lua:575|PLAYER_PROFESSIONS} Thread finished: PLAYER_PROFESSIONS [DEAD,0.1%]
+  16:19:06.446 [INFO] {FSM.lua:93} [CRAFTING_UI_CRAFTING] EV_BAG_UPDATE_DELAYED
+  16:19:06.446 [INFO] {Analytics.lua:78} AC ADDON_ENABLE 91
+  16:19:06.446 [WARN] {Addon.lua:57} OnEnable (AuctionDB) took 39.85ms
+  16:19:06.446 [WARN] {Addon.lua:57} OnEnable (BagTracking) took 41.40ms
+  16:19:06.446 [INFO] {FSM.lua:86} [DESTROYING] EV_FRAME_TOGGLE (ignored - handling event)
+  16:19:06.446 [INFO] {Analytics.lua:78} AC UI_NAVIGATION destroying 
+  16:19:06.446 [INFO] {FSM.lua:118} [DESTROYING] ST_FRAME_OPEN -> ST_FRAME_CLOSED
+  16:19:06.446 [INFO] {FSM.lua:118} [DESTROYING] ST_FRAME_OPENING -> ST_FRAME_OPEN
+  16:19:06.446 [INFO] {Analytics.lua:78} AC UI_NAVIGATION  destroying
+  16:19:06.446 [INFO] {FSM.lua:118} [DESTROYING] ST_FRAME_CLOSED -> ST_FRAME_OPENING
+  16:19:06.446 [INFO] {FSM.lua:93} [DESTROYING] EV_BAG_UPDATE
+  16:19:06.446 [INFO] {Analytics.lua:78} AC ADDON_INITIALIZE 240
+  16:19:06.446 [INFO] {Thread.lua:595} Starting scheduler
+  16:19:06.446 [WARN] {Addon.lua:39} OnInitialize (Transactions) took 35.55ms
+  16:19:06.446 [WARN] {Addon.lua:39} OnInitialize (Groups) took 51.63ms
+  16:19:06.446 [WARN] {Addon.lua:39} OnInitialize (ItemInfo) took 71.54ms
+  16:19:06.446 [INFO] {ItemInfo.lua:92} Imported 10968 items worth of data
+  16:19:06.446 [WARN] {Addon.lua:39} OnInitialize (TradeSkillMaster) took 31.87ms
+Addons:
+  AddonUsage ()
+  Bartender4 (4.8.8)
+  ClassicSpellActivations ()
+  Combuctor (8.2.10)
+  FriendGroups (1.13-fix1)
+  idTip (8.2.1)
+  Kui_Nameplates ()
+  Kui_Nameplates_Core ()
+  LetMeCast (1.3)
+  Masque (8.2.7-Classic)
+  MerInspect (1.0.2)
+  Myslot (v5.2.8-classic)
+  QuestAnnounce (v7.0.0)
+  QuestFrameFixer (1.1.1)
+  QuestLogEx (1.2)
+  ServerFriendsOnly (1.1.14)
+  TinyTooltip (8.2.1)
+  VendorPrice (1.2.9)
+  TSM (v4.8.17)
+  DBM-StatusBarTimers ()

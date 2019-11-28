@@ -1,0 +1,2 @@
+regsvr32 /u "C:\Users\Joe\Desktop\万能脚本录制器V12.15\dm.dll"
+regsvr32 "D:\Game\World of Warcraft\wobot\ahbot\node_modules\dm.dll\dist\dm.dll"
